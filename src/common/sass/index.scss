@@ -1,0 +1,472 @@
+@import "variable";
+
+body{
+  margin: 0;
+}
+html{
+  font-size: 14px;
+  line-height: 1;
+  font-family: 'PingFangSC-Light, sans-serif','PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: $white;
+  color: $black-color;
+
+}
+
+/******************************mint ui 重定样式***********************************/
+/*头部*/
+.mint-header{
+  background-color: $header-background;
+  height: $header-height;
+  font-size: $title-size;
+}
+/*底部*/
+.mint-tabbar{
+  background-color: $white;
+  position:fixed;
+  z-index:2000;
+}
+.footer-bottom .mint-tab-item{
+  padding: 3px 0 !important;
+}
+.mint-tabbar > .mint-tab-item{
+  color: $font-grey-color;
+  border-right: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+}
+.mint-tabbar > .mint-tab-item:last-child{
+  border-right: 0;
+}
+
+.mint-tabbar > .mint-tab-item.is-selected{
+  background-color: $white;
+  color: $item-color !important;
+  border-top: 1px solid #d9d9d9;
+}
+.mint-cell-text{
+  font-size: $common-size;
+}
+.setting-manage .mint-cell-wrapper,.setting-home .mint-cell-wrapper,.setting-signin .mint-cell-wrapper, .setting-news .mint-cell-wrapper,.member-card .mint-cell-wrapper,.incrementservice-div .mint-cell-wrapper{
+  background-image: none;
+}
+.setting-manage .mint-cell-text{
+  font-size: 12px;
+}
+.mint-cell-wrapper{
+  padding: 0 20px;
+}
+.setting-signin .mint-cell:last-child ,.setting-news .mint-cell:last-child,.member-card .mint-cell:last-child,.member-card .mint-cell:first-child,.incrementservice-div .mint-cell:last-child{
+  background-image:none;
+}
+.setting-signin .mint-cell-value,.mint-cell-text{
+  font-size: 14px;
+  color: $black-color;
+}
+.setting-signin  .mint-switch-core, .setting-keywords .mint-switch-core, .update-notice .mint-switch-core{
+  width:40px;
+  height: 18px;
+  background-color: $shallow-black-color;
+  border-color: $shallow-black-color;
+}
+.setting-signin .mint-switch-core::before, .setting-keywords .mint-switch-core::before, .update-notice .mint-switch-core::before{
+  width: 18px;
+  height: 16px;
+}
+.setting-signin .mint-switch-core::after, .setting-keywords .mint-switch-core::after, .update-notice .mint-switch-core::after{
+  width: 18px;
+  height: 16px;
+}
+.setting-signin .mint-switch-input:checked + .mint-switch-core, .setting-keywords .mint-switch-input:checked + .mint-switch-core, .update-notice .mint-switch-input:checked + .mint-switch-core{
+  border-color: $color-toptip-text;
+  background-color: $color-toptip-text;
+}
+.setting-sign .mint-navbar{
+  position: fixed;
+  top:121px;
+  left: 0px;
+  right: 0px;
+  z-index: 200;
+}
+/*按钮默认样式*/
+.button-default{
+  height: $button-height;
+  border-radius: 4px;
+  background-color: $color-text;
+  border: 1px solid $color-text;
+  outline: none;
+}
+.button-default label{
+  height: 20px;
+  line-height: 20px;
+  font-size: $assist-size;
+  color: white;
+}
+
+/*群签到样式*/
+//.setting-sign .mint-tab-item-label, .leaguer-detail .mint-tab-item-label, .setting-grouphit .mint-tab-item-label, .user-me-order .mint-tab-item-label, .user-mygroup .mint-tab-item-label, .user-fuescription .mint-tab-item-label, .access-content .mint-tab-item-label, .setting-grouprank .mint-tab-item-label{
+//  height: 30px !important;
+//  line-height: 30px !important;
+//}
+.setting-sign .mint-tab-item,.leaguer-detail .mint-tab-item, .setting-grouphit .mint-tab-item, .user-me-order .mint-tab-item, .user-mygroup .mint-tab-item, .user-fuescription .mint-tab-item, .access-content .mint-tab-item, .setting-grouprank .mint-tab-item{
+  background-color: $border-color;
+}
+.setting-sign .mint-navbar .mint-tab-item.is-selected, .leaguer-detail .mint-navbar .mint-tab-item.is-selected, .setting-grouphit .mint-navbar .mint-tab-item.is-selected, .user-me-order .mint-navbar .mint-tab-item.is-selected, .user-mygroup .mint-navbar .mint-tab-item.is-selected, .user-fuescription .mint-navbar .mint-tab-item.is-selected, .access-content .mint-navbar .mint-tab-item.is-selected, .setting-grouprank .mint-navbar .mint-tab-item.is-selected{
+  background-color: $color-text;
+  color: white;
+  font-size: $common-size;
+  border-bottom: 0px;
+  margin-bottom: 0px;
+}
+.mint-navbar .mint-tab-item{
+  padding: 9px 0px;
+}
+.leaguer-detail .mint-navbar .mint-tab-item, .setting-score .mint-navbar .mint-tab-item, .setting-grouphit .mint-navbar .mint-tab-item, .setting-grouprank .mint-navbar .mint-tab-item, .setting-groupaccess .mint-navbar .mint-tab-item, .user-mygroup .mint-navbar .mint-tab-item, .user-me-order .mint-navbar .mint-tab-item, .user-fuescription .mint-navbar .mint-tab-item{
+  padding: 9px 0px;
+}
+.member-leaguer .el-table--border td:first-child .cell, .el-table--border th:first-child .cell, .el-table .cell, .el-table th div{
+  padding-left: 0px;
+}
+.leaguer-detail .el-table--border td:first-child .cell, .el-table--border th:first-child .cell, .el-table .cell, .el-table th div{
+  padding-left: 0px;
+}
+.setting-score .el-table--border td:first-child .cell, .el-table--border th:first-child .cell, .el-table .cell, .el-table th div{
+  padding-left: 0px;
+}
+.el-table .cell{
+  line-height: inherit;
+}
+.setting-score .el-table .cell, .leaguer-detail .el-table .cell, .member-leaguer .el-table .cell{
+  line-height: inherit;
+}
+.setting-sign  .mint-tab-container-wrap, .leaguer-detail  .mint-tab-container-wrap, .setting-grouphit  .mint-tab-container-wrap, .user-me-order .mint-tab-container-wrap, .user-mygroup .mint-tab-container-wrap, .user-fuescription .mint-tab-container-wrap, .setting-grouprank  .mint-tab-container-wrap{
+  background-color: $white;
+}
+.setting-news .van-uploader__input, .home-dynamics .van-uploader__input{
+  height: 48px;
+  width: 48px;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  margin-top: -48px;
+  opacity: 0;
+}
+
+/*input默认样式*/
+.input-default{
+  -webkit-appearance:none;
+  padding: 1px 0px 1px 0px;
+  height: 28px;
+  border: $grey-background;
+  background-color: $grey-background;
+  width: 100%;
+  font-size: $assist-size;
+  color: $black-color;
+  border-radius: 2px;
+  text-indent:10px;
+  outline:none;
+}
+/*弹框样式*/
+.mint-msgbox{
+  border-radius: 10px;
+}
+.mint-msgbox-content{
+  padding: 0px;
+  border-bottom: none;
+}
+.mint-msgbox-message{
+  line-height: inherit;
+}
+.mint-msgbox-cancel{
+  border-top: 1px solid $border-color;
+  border-right:1px solid $border-color;
+}
+.mint-msgbox-confirm{
+  border-top: 1px solid $border-color;
+  color: $color-text;
+}
+.mint-msgbox-message{
+  font-family: 'PingFangSC-Light, sans-serif','PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+}
+
+.setting-score .mt-progress-runway, .setting-score-detail .mt-progress-runway{
+  border-radius: 5px;
+  background-color: $border-color;
+}
+.setting-score .mt-progress-progress, .setting-score-detail .mt-progress-progress{
+  background-color: $color-text;
+  border-radius: 5px;
+}
+.setting-score .mt-progress, .setting-score-detail .mt-progress{
+  height: 15px;
+  line-height: 15px;
+}
+.bottom-left{
+  margin-bottom: 60px;
+}
+
+
+.dialog-top .icon-close{
+  float: right;
+  opacity: 0.9;
+}
+/*el-table 样式*/
+.el-table__header-wrapper table{
+  border-top: 1px solid $border-color;
+  width: auto;
+}
+.el-table .cell, .el-table th div{
+  padding: 0px;
+  text-align: center;
+  font-size: $assist-size;
+  color: $black-color;
+}
+.el-table .cell{
+  line-height: inherit;
+}
+.el-table .caret-wrapper{
+  height: 9px;
+}
+.member-leaguer .el-table .sort-caret.ascending, .leaguer-detail .el-table .sort-caret.ascending, .setting-score .el-table .sort-caret.ascending{
+  top:-5px;
+}
+.member-leaguer .el-table .sort-caret.descending, .leaguer-detail .el-table .sort-caret.descending, .setting-score .el-table .sort-caret.descending{
+  bottom:-5px;
+}
+.el-table .sort-caret.ascending{
+  top:-5px;
+}
+.el-table .sort-caret.descending{
+  bottom: -5px;
+}
+.el-table--border::after, .el-table--group::after, .el-table::before{
+  z-index: 0;
+}
+.el-table .ascending .sort-caret.ascending{
+  border-bottom-color: $color-text;
+}
+.member-leaguer .el-table .ascending .sort-caret.ascending, .leaguer-detail .el-table .ascending .sort-caret.ascending, .setting-score .el-table .ascending .sort-caret.ascending{
+  border-bottom-color: $color-text;
+}
+.member-leaguer .el-table .descending .sort-caret.descending, .leaguer-detail .el-table .descending .sort-caret.descending, .setting-score .el-table .descending .sort-caret.descending{
+  border-top-color: $color-text;
+}
+.el-table .descending .sort-caret.descending{
+  border-top-color: $color-text;
+}
+.el-table__row td:last-child{
+  padding-right: 15px;
+}
+.el-table td, .el-table th.is-leaf{
+  border-bottom: 1px solid $border-color;
+  //height: 45px;
+}
+.el-table td, .el-table th{
+  padding: 10px 0;
+}
+
+/*弹框样式*/
+.dialog-default{
+  background-color: $white;
+  width: 300px;
+  font-size: $common-size;
+  border-radius: 10px;
+}
+/*弹框顶部*/
+.dialog-top{
+  background-color: $color-text;
+  color: $white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding:10px 20px 9px 20px;
+}
+.van-popup{
+  border-radius: 10px;
+}
+/*弹框主体部分*/
+.dialog-default-content{
+  font:100 14px 'PingFangSC-Light, sans-serif','PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  padding: 20px;
+}
+/*弹框底部按钮*/
+.dialog-default-bottom{
+  border-top: 1px solid $border-color;
+  height: 40px;
+  font-size: 0px;
+  text-align: center;
+}
+.dialog-default-bottom div{
+  font-size: $common-size;
+  color: $black-color;
+  width: 49%;
+  line-height: 40px;
+  display: inline-block;
+}
+.dialog-default-bottom div:last-child{
+  color: $color-text;
+  border-left: 1px solid $border-color;
+}
+.setting-score-detail .el-collapse-item__header,.setting-grouplog .el-collapse-item__header{
+  border-bottom: none;
+  font-size: $common-size;
+  color: $color-text;
+  height: 35px;
+  line-height: 35px;
+}
+.setting-score-detail .el-collapse-item__wrap,.setting-grouplog .el-collapse-item__wrap{
+  border-bottom: none;
+}
+.setting-score-detail .el-collapse,.setting-grouplog .el-collapse{
+  border-top: none;
+}
+
+.setting-score-detail .el-collapse-item__arrow,.setting-grouplog .el-collapse-item__arrow{
+  line-height: 35px;
+  margin-right: 0px;
+}
+.setting-score-detail .el-collapse-item__content,.setting-grouplog .el-collapse-item__content{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.member-leaguer .mint-cell-allow-right::after, .leaguer-detail .mint-cell-allow-right::after{
+  top:50%;
+}
+.member-leaguer .table2 thead .cell, .leaguer-detail .leaguler-detail-table2 thead .cell, .leaguer-detail .leaguler-detail-search-table2 thead .cell, .setting-score .score-table2 thead .cell{
+  padding: 3px;
+}
+.setting-grouprank .mint-cell-allow-right::after{
+  top:auto;
+}
+.member-leaguer .table2 .el-table__body-wrapper{
+  margin-top: 120px;
+}
+.setting-score .score-table2 .el-table__body-wrapper{
+  margin-top: 70px;
+}
+.leaguer-detail .leaguler-detail-table2 .el-table__body-wrapper{
+  margin-top: 120px;
+}
+.leaguer-detail .leaguler-detail-search-table2 .el-table__body-wrapper{
+  margin-top: 90px;
+}
+/*个人名片*/
+
+.member-card .mint-cell-wrapper{
+  padding: 0;
+}
+.leaguer-detail .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+  background-color: $color-text;
+  border-color: $color-text;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+  background-color: $color-text;
+  border-color: $color-text;
+}
+.leaguer-detail .inner-table .el-table__header .el-checkbox__inner{
+  display: none;
+}
+.member-leaguer .inner-table .el-table__header .caret-wrapper, .leaguer-detail .inner-table .el-table__header .caret-wrapper, .setting-score .inner-table .el-table__header .caret-wrapper{
+  height:12px
+}
+.member-leaguer .inner-table .el-table__header   td, .member-leaguer .inner-table .el-table__header  th{
+  padding: 9px 0px;
+}
+.leaguer-detail .inner-table .el-table__header   td, .leaguer-detail .inner-table .el-table__header  th{
+  padding: 9px 0px;
+}
+.setting-score .inner-table .el-table__header   td, .setting-score .inner-table .el-table__header  th{
+  padding: 9px 0px;
+}
+.el-checkbox__inner:hover{
+  border-color: 1px solid $color-text;
+}
+.el-checkbox__input.is-focus .el-checkbox__inner{
+  border-color:  $color-text;
+}
+.el-table__row td:last-child{
+  padding-right: 0px;
+}
+.leaguer-detail .mint-cell-allow-right::after, .member-leaguer .mint-cell-allow-right::after{
+  right:6px;
+}
+.el-checkbox__inner{
+  z-index: 0;
+}
+.member-card .mint-cell-wrapper{
+  border-bottom: 1px solid $border-color;
+}
+.member-card .mint-cell:last-child .mint-cell-wrapper{
+  border: none;
+}
+.member-card .mint-cell-title{
+  padding-left:50px;
+}
+/*.member-card .mt-progress{
+  width: 30%;
+  float: right;
+}*/
+/*增值服务*/
+.incrementservice-div .mint-cell:first-child{
+  margin-top:0;
+}
+.incrementservice-div .mint-cell{
+  margin-top: $space-height;
+}
+.incrementservice-div .mint-cell:last-child{
+  margin-bottom: $space-height;
+}
+.incrementservice-div .mint-switch-input:checked + .mint-switch-core,.setting-scorerule .mint-switch-input:checked + .mint-switch-core{
+  border-color: $color-toptip-text;
+  background-color: $color-toptip-text ;
+}
+.incrementservice-div .mint-switch-core,.setting-scorerule .mint-switch-core{
+  width: 40px;
+  height: 18px;
+}
+.incrementservice-div .mint-switch-core::after,.setting-scorerule .mint-switch-core::after{
+  width: 18px;
+  height: 16px;
+}
+.incrementservice-div .mint-switch-core::before,.setting-scorerule .mint-switch-core::before{
+  background: $shallow-black-color;
+  width: 40px;
+  height: 18px;
+}
+.incrementservice-div .mint-cell-text{
+  padding-left: 10px;
+}
+
+
+/*时间控件样式*/
+.update-notice .mint-datetime,.setting-signin .mint-datetime{
+  width: 102%;
+}
+.update-notice .picker-toolbar span:first-child, .setting-signin .picker-toolbar span:first-child{
+  color: $black-color;
+}
+.update-notice .picker-toolbar span:nth-child(2), .setting-signin .picker-toolbar span:nth-child(2){
+  color: $color-text;
+}
+
+/*绿色下箭头*/
+.arrow-bottom{
+  display: inline-block;
+  border-left: 2px solid; border-bottom:2px solid;
+  width: 6px; height:6px;
+  transform: rotate(-45deg);
+  color: $color-text;
+}
+/*超过宽度显示省略号*/
+.nowarp{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+/*没有数据时提示信息的样式*/
+.noContent{
+  text-align: center;
+  padding-top: 20px;
+  font-size: $assist-size;
+  color: $shallow-black-color;
+}
